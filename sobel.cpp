@@ -131,8 +131,8 @@ namespace keymolen {
                         convolve_X += buffer_[src_pos + (kx + (ky * w_))] * Gx[k];
                         convolve_Y += buffer_[src_pos + (kx + (ky * w_))] * Gy[k];
                 
-						buffer2_[src_pos] = (unsigned char)((sqrt((convolve_X*convolve_X) + (convolve_Y*convolve_Y))));
-						
+						buffer2_[src_pos] = sqrt((convolve_X*convolve_X) + (convolve_Y*convolve_Y));
+					
                         k++;
                     }
                 }
@@ -151,7 +151,8 @@ namespace keymolen {
 					max = buffer2_[p];
 				}
 			}
-			normalize_factor = max / 255.0;
+			normalize_factor = 255.0 / max;
+			std::cout << "max: " << max << " normalize: " << normalize_factor << std::endl;
 		}
 
         for (int x = offset_xy; x < w_ - offset_xy; x++) {
