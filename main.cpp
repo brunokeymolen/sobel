@@ -65,7 +65,7 @@ void usage(char * s)
     fprintf( stderr, "%s -s <source file> [-n] [-? help]", s);
 	fprintf( stderr, "   s: path image file\n");
 	fprintf( stderr, "   n: normalize output\n");
-	fprintf( stderr, "\nexample:  ./sobel -n -s ./img/russell-crowe-robin-hood-arrow.jpg \n");
+	fprintf( stderr, "\nexample:  ./sobel -n -s ./img/Bikesgray.jpg \n");
 	fprintf( stderr, "\n");
 }
 
