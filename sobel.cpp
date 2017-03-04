@@ -104,8 +104,8 @@ namespace keymolen {
                 int convolve = 0;
                 int k = 0;
                 int pos = x + (y * w_);
-                for (int kx = -offset_xy; kx <= offset_xy; kx++) {
-                    for (int ky = -offset_xy; ky <= offset_xy; ky++) {
+                for (int ky = -offset_xy; ky <= offset_xy; ky++) {
+                	for (int kx = -offset_xy; kx <= offset_xy; kx++) {
                         convolve += (src[pos + (kx + (ky * w_))] * kernel[k]);
                         k++;
                     }
