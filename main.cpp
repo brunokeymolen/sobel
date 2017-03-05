@@ -145,7 +145,13 @@ void doTransform(std::string file_path)
 			filter = keymolen::Sobel::NoiseFilter::Gaus3x3;
 		if(c == '5')
 			filter = keymolen::Sobel::NoiseFilter::Gaus5x5;
-		
+		if(c == 's')
+		{
+			cv::imwrite( "sobel.png", img_edge );
+			std::cout << "write sobel.png done..." << std::endl;
+		}
+
+
 		std::cout << normalize << std::endl;
 
 		if(c == 27)
