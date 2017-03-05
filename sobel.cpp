@@ -71,7 +71,7 @@ namespace keymolen {
     const int Gaus3x3Div = 16;
 
 
-	const int8_t Gaus5x5[] = {  2,  4,  5,  4, 2,
+    const int8_t Gaus5x5[] = {  2,  4,  5,  4, 2,
                                 4,  9, 12,  9, 4,
                                 5, 12, 15, 12, 5, // * 1/159
                                 4,  9, 12,  9, 4,
